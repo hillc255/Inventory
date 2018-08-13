@@ -104,7 +104,6 @@ public final class InventoryContract {
          */
         public final static String COLUMN_PHONE = "phone";
 
-
     }
 
 }
