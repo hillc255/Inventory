@@ -1,5 +1,7 @@
 package com.example.android.inventory;
 
+// Based on Udacity's Pets program: https://github.com/udacity/ud845-Pets
+
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -72,6 +74,7 @@ public class CatalogActivity extends AppCompatActivity {
             //
             // In the while loop below, iterate through the rows of the cursor and display
             // the information from each column in this order.
+
             displayView.setText("The inventory table contains " + cursor.getCount() + " items.\n\n");
             displayView.append(InventoryEntry._ID + " - " +
                     InventoryEntry.COLUMN_PRODUCT_NAME + " - " +

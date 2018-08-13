@@ -1,8 +1,11 @@
 package com.example.android.inventory.data;
 
+// Based on Udacity's Pets program: https://github.com/udacity/ud845-Pets
+
 import android.content.ContentResolver;
 import android.net.Uri;
 import android.provider.BaseColumns;
+
 
 /**
  * API Contract for the Inventory app.
@@ -63,7 +66,7 @@ public final class InventoryContract {
         /**
          * Name of database table for inventory
          */
-        public final static String TABLE_NAME = "inventory11";
+        public final static String TABLE_NAME = "inventory";
 
         /**
          * Unique ID number for the inventory list (only for use in the database table).

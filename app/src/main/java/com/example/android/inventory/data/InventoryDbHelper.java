@@ -1,5 +1,7 @@
 package com.example.android.inventory.data;
 
+// Based on Udacity's Pets program: https://github.com/udacity/ud845-Pets
+
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -18,7 +20,7 @@ public class InventoryDbHelper extends SQLiteOpenHelper {
     /**
      * Name of the database file
      */
-    private static final String DATABASE_NAME = "inventory11.db";
+    private static final String DATABASE_NAME = "inventory.db";
 
     /**
      * Database version. If you change the database schema, you must increment the database version.
@@ -44,7 +46,7 @@ public class InventoryDbHelper extends SQLiteOpenHelper {
                 + InventoryEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + InventoryEntry.COLUMN_PRODUCT_NAME + " TEXT NOT NULL UNIQUE, "
                 + InventoryEntry.COLUMN_PRICE + " INTEGER NOT NULL, "
-                + InventoryEntry.COLUMN_QUANTITY + " INTEGER DEFAULT 0, "
+                + InventoryEntry.COLUMN_QUANTITY + " INTEGER NOT NULL, "
                 + InventoryEntry.COLUMN_SUPPLIER + " TEXT NOT NULL, "
                 + InventoryEntry.COLUMN_PHONE + " TEXT NOT NULL);";
 
