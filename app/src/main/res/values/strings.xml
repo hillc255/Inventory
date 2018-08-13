@@ -2,4 +2,7 @@
     <string name="app_name">Inventory</string>
     <!-- Label for overview category of attributes in the editor [CHAR LIMIT=30] -->
     <string name="category_overview">Overview</string>
+
+    <string name="insert">insert dummy data</string>
+
 </resources>

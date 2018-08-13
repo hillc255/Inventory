@@ -18,12 +18,7 @@
 
     <item
         android:id="@+id/action_insert_dummy_data"
-        android:title="insert_dummy_data"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/read_second_entry"
-        android:title="read_second_entry"
+        android:title="@string/insert"
         app:showAsAction="never" />
 
 </menu>

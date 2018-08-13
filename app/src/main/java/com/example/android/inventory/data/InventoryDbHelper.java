@@ -18,7 +18,7 @@ public class InventoryDbHelper extends SQLiteOpenHelper {
     /**
      * Name of the database file
      */
-    private static final String DATABASE_NAME = "inventory5.db";
+    private static final String DATABASE_NAME = "inventory11.db";
 
     /**
      * Database version. If you change the database schema, you must increment the database version.
@@ -42,9 +42,9 @@ public class InventoryDbHelper extends SQLiteOpenHelper {
         // Create a String that contains the SQL statement to create the pets table
         String SQL_CREATE_INVENTORY_TABLE = "CREATE TABLE " + InventoryEntry.TABLE_NAME + " ("
                 + InventoryEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + InventoryEntry.COLUMN_PRODUCT_NAME + " TEXT NOT NULL, "
+                + InventoryEntry.COLUMN_PRODUCT_NAME + " TEXT NOT NULL UNIQUE, "
                 + InventoryEntry.COLUMN_PRICE + " INTEGER NOT NULL, "
-                + InventoryEntry.COLUMN_QUANTITY + " INTEGER NOT NULL, "
+                + InventoryEntry.COLUMN_QUANTITY + " INTEGER DEFAULT 0, "
                 + InventoryEntry.COLUMN_SUPPLIER + " TEXT NOT NULL, "
                 + InventoryEntry.COLUMN_PHONE + " TEXT NOT NULL);";
 

@@ -63,7 +63,7 @@ public final class InventoryContract {
         /**
          * Name of database table for inventory
          */
-        public final static String TABLE_NAME = "inventory5";
+        public final static String TABLE_NAME = "inventory11";
 
         /**
          * Unique ID number for the inventory list (only for use in the database table).

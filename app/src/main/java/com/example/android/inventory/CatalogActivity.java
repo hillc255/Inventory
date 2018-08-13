@@ -1,23 +1,22 @@
 package com.example.android.inventory;
 
 import android.content.ContentValues;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
-import com.example.android.inventory.data.InventoryDbHelper;
 import com.example.android.inventory.data.InventoryContract.InventoryEntry;
+import com.example.android.inventory.data.InventoryDbHelper;
 
 public class CatalogActivity extends AppCompatActivity {
 
-    /** Database helper that will provide us access to the database */
+    /**
+     * Database helper that will provide us access to the database
+     */
     private InventoryDbHelper newDbHelper;
 
     @Override
@@ -34,7 +33,7 @@ public class CatalogActivity extends AppCompatActivity {
         super.onStart();
         displayDatabaseInfo();
     }
-//
+
     /**
      * Temporary helper method to display information in the onscreen TextView about the state of
      * the pets database.
@@ -51,7 +50,7 @@ public class CatalogActivity extends AppCompatActivity {
                 InventoryEntry.COLUMN_PRICE,
                 InventoryEntry.COLUMN_QUANTITY,
                 InventoryEntry.COLUMN_SUPPLIER,
-                InventoryEntry.COLUMN_PHONE };
+                InventoryEntry.COLUMN_PHONE};
 
         // Perform a query on the pets table
         Cursor cursor = db.query(
@@ -63,7 +62,7 @@ public class CatalogActivity extends AppCompatActivity {
                 null,                  // Don't filter by row groups
                 null);                   // The sort order
 
-        TextView displayView = (TextView) findViewById(R.id.text_view_inventory);
+        TextView displayView = findViewById(R.id.text_view_inventory);
 
         try {
             // Create a header in the Text View that looks like this:
@@ -124,7 +123,7 @@ public class CatalogActivity extends AppCompatActivity {
         // Create a ContentValues object where column names are the keys,
         // and Toto's pet attributes are the values.
         ContentValues values = new ContentValues();
-        values.put(InventoryEntry.COLUMN_PRODUCT_NAME, "Book on Happiness");
+        values.put(InventoryEntry.COLUMN_PRODUCT_NAME, "Book of Happiness");
         values.put(InventoryEntry.COLUMN_PRICE, 10);
         values.put(InventoryEntry.COLUMN_QUANTITY, 1);
         values.put(InventoryEntry.COLUMN_SUPPLIER, "Amazon");
@@ -141,7 +140,7 @@ public class CatalogActivity extends AppCompatActivity {
 
     }
 
-//    @Override
+    //    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu options from the res/menu/menu_catalog.xml file.
         // This adds menu items to the app bar.
@@ -149,7 +148,7 @@ public class CatalogActivity extends AppCompatActivity {
         return true;
     }
 
-//    @Override
+    //    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // User clicked on a menu option in the app bar overflow menu
         switch (item.getItemId()) {
