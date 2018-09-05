@@ -7,6 +7,7 @@ Name: Inventory - Stage I
 
 This is an example of creating an SQLite database for an inventory application.
 
+<p align="center"><kbd><img width="300" height="532" src="readme_assets/inventory.png"></kbd>
 
 ## Code Description
 
